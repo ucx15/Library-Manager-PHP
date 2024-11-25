@@ -1,7 +1,10 @@
 <?php
+
+$ENV = parse_ini_file(".env");
+
 $host="localhost";
 $username="root";
-$password="";  // Your server password
+$password=$ENV["SQL_PASS"];  // Your server password
 $dbname="libDB";
 
 // Create connection

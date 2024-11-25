@@ -4,10 +4,6 @@
 if (isset($_GET['addForm'])) {
 	include 'conn.php';
 
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
-
 	$formType = $_GET['addForm'];
 
 	if ($formType == "add-book") {
@@ -36,21 +32,12 @@ if (isset($_GET['addForm'])) {
 // LOGOUT
 if (isset($_GET["logout"])) {
 	session_destroy();
-	echo 1;
+	echo 1;            // What ??
 }
 
 // APP
 if (isset($_GET["initApp"])) {
-	$host = "localhost";
-	$username = "root";
-	$password = "zxcv";
-
-	// Create connection
-	$conn = new mysqli($host, $username, $password);
-
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
+include 'conn.php';
 
 	// Create database
 	$sql = "CREATE DATABASE IF NOT EXISTS libDB";

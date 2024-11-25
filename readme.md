@@ -12,6 +12,14 @@ Library Management Software written in Vanilla HTML/CSS, JS and PHP.
 
 ## Quick Start
 
+- Create .env file in root directory and populate it
+with your SQL server password with key name: `SQL_PASS`
+
+    ```ini
+    ; .env file
+    SQL_PASS = "<your SQL Server Password>"
+    ```
+
 - Make Public folder as the root directory of your web server.
 
 - Start your web server and MySQL server.
